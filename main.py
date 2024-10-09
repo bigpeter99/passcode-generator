@@ -1,7 +1,7 @@
 import string
 from random import choice
 
-def generator_password(min_length, numbers=True, special_characters=True):
+def generate_password(min_length, numbers=True, special_characters=True):
     letters = string.ascii_letters
     digits = string.digits
     special = string.punctuation
@@ -38,5 +38,5 @@ def generator_password(min_length, numbers=True, special_characters=True):
 minimum_length = int(input("Enter the minimum length: "))
 has_number = str(input("Do you want to have numbers? [Y/n]: ")).lower() == 'y'
 has_special = str(input("Do you want it to have special characters? [Y/n]: ")).lower() == 'y'
-pwd = generator_password(minimum_length, has_number, has_special)
+pwd = generate_password(minimum_length, has_number, has_special)
 print(f"The generated passcode is {pwd}")
